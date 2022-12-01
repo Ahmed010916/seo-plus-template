@@ -18,12 +18,12 @@ function FloatingButtons() {
     setTheme(document.body.dataset.theme);
   }
   return (
-    <div className='fixed bottom-6 left-6 flex flex-col gap-2'>
-        <button onClick={()=>handleTheme()} className='btn btn-primary btn-xs md:btn-sm  text-white'>
+    <div className='fixed bottom-6 left-6 flex flex-col gap-2 z-20'>
+        <button onClick={()=>handleTheme()} className='btn btn-primary btn-sm md:btn-sm  text-white focus:outline-0'>
           {theme === "mytheme" ?<FaRegMoon /> :<FaSun /> } 
         </button>
-        <button onClick={()=>window.scrollTo(0, 0)} className='btn btn-primary btn-xs md:btn-sm text-white'><FaAngleDoubleUp /></button>
-        <button onClick={()=>{
+        <button onClick={()=>window.scrollTo(0, 0)} className='btn btn-primary btn-sm md:btn-sm text-white'><FaAngleDoubleUp /></button>
+        {/* <button onClick={()=>{
            if(document.body.dir === "rtl") {
             document.body.dir = "ltr"
             setdir('ltr')
@@ -31,7 +31,7 @@ function FloatingButtons() {
             document.body.dir = "rtl"
             setdir('rtl')
           }
-        }} className='btn btn-primary btn-xs md:btn-sm  text-white'><FaRedoAlt className='mr-2'/> {dir === "rtl"?'AR':'EN'} </button>
+        }} className='btn btn-primary btn-xs md:btn-sm  text-white'><FaRedoAlt className='mr-2'/> {dir === "rtl"?'AR':'EN'} </button> */}
     </div>
   )
 }

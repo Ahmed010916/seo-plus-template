@@ -7,4 +7,10 @@
     body {
         font-family: 'Tajawal', sans-serif;
     }
+    [data-theme="dark"] {
+        color: white;
+    }
+    [data-theme="mytheme"] {
+        color: black;
+    }
 }
